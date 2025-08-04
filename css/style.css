@@ -2,6 +2,7 @@
 :root {
   --highlight-color: #e0f11f;
   --primary-color: #121212;
+  --primary-color-80: rgba(18, 18, 18, 0.8);
   --primary-color-50: rgba(18, 18, 18, 0.5);
   --primary-color-30: rgba(18, 18, 18, 0.3);
   --primary-color-20: rgba(18, 18, 18, 0.2);
@@ -96,7 +97,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background-color: var(--primary-color-20);
+  background-color: var(--primary-color-80);
 }
 .menu a {
   opacity: 0;
@@ -315,25 +316,27 @@ body {
   opacity: 0;
   transform: translateY(400px);
 }
-@media (max-width: 576px) {
-  .hero-text {
-    font-size: 160px;
-    line-height: 180px;
-  }
-  .hero-image-wrapper {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  .hero-image-wrapper img {
-    width: 150px;
-  }
-}
 .fa-fire {
   color: var(--highlight-color);
   font-size: 48px;
 }
+@media (max-width: 576px) {
+  .hero-text {
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .hero-image-wrapper {
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .hero-image-wrapper img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .hero-description p {
   font-size: 22px;
   color: var(--secondary-color);
@@ -460,6 +463,46 @@ body {
 .about-image-wrapper img {
   filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(200%) brightness(105%);
   opacity: 0.1;
+}
+.about-us-card-title {
+  font-size: 26px;
+  font-weight: bold;
+}
+.about-us-description {
+  margin-top: 4px;
+  font-size: 18px;
+}
+.about-us-percentage {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--primary-color-30);
+}
+
+@media (max-width: 576px) {
+  .about-us-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .about-us-description {
+    margin-top: 4px;
+    font-size: 15px;
+  }
+  .about-us-percentage {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--primary-color-30);
+  }
+  .about-us-card {
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+    padding: 18px;
+    width: 100%;
+    color: #191a23;
+    font-family: var(--dm-sans);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 /*about section end */
 
@@ -814,8 +857,15 @@ body {
 }
 
 @media (max-width: 576px) {
+  .diamond {
+    font-size: 48px;
+    color: var(--highlight-color);
+    margin-top: 10px;
+    display: inline-block;
+  }
+
   .aboutUs-page-hero-text {
-    font-size: 120px;
+    font-size: 80px;
     font-weight: 600;
     font-family: var(--big-shoulder);
     color: var(--highlight-color);
@@ -845,7 +895,7 @@ body {
     position: absolute;
     z-index: 20;
     top: 0px;
-    right: 10px;
+    right: -20px;
   }
   .my-details {
     display: flex;
